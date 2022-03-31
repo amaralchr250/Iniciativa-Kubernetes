@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: webapi
-        image: amaralchr/conversao-temperatura:v1.1
+        image: amaralchr/conversao-temperatura:latest
         ports:
         - containerPort: 80
 ---
