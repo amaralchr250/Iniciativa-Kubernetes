@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: amaralchr/rotten-potatoes:v1.2
+        image: amaralchr/rotten-potatoes:latest
         ports:
         - containerPort: 5000
         env:
