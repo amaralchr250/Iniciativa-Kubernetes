@@ -29,5 +29,5 @@ spec:
   selector:
     app: web
   ports:
-  - port: 5050
+  - port: 8080
   type: NodePort
