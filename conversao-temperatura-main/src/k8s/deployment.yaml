@@ -1,0 +1,33 @@
+# Deployment da API
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: webapi
+        image: amaralchr/conversao-temperatura:v1.1
+        ports:
+        - containerPort: 80
+---
+
+# Service Web
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+spec:
+  selector:
+    app: web
+  ports:
+  - port: 5050
+  type: NodePort
